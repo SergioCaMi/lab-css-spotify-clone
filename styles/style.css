@@ -13,11 +13,12 @@ White: #FFF
 * {
     margin: 0px;
     padding: 0px;
-
+    box-sizing: border-box;
 }
 
 body {
     color: #1A1A1A;
+    padding-top: 58px;
 }
 
 ul {
@@ -48,6 +49,9 @@ a {
     padding: 10px 50px;
 }
 
+.navbar a{
+    color: #1A1A1A;
+}
 .logo {
     background-image: url(../images/spotify-logo.png);
     background-size: contain;
@@ -58,13 +62,14 @@ a {
 
 /* Cover  */
 .cover {
-    margin-top: 58px;
+    /* margin-top: 58px; */
     background-image: url(../images/landing.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     width: 100%;
-    height: 800px;
-    background-position: center 100px;
+    height: 900px;
+    background-position: top 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,8 +89,107 @@ a {
 }
 
 /* Whats */
-
+.whats * {
+    flex: 1;
+}
 .whats {
     display: flex;
     flex-direction: column;
+}
+
+.whats__title {
+    margin: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.cards{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 20px;
+    flex: 1 1 30%;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    flex-basis: 200px;
+    min-height: 200px;
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+
+
+
+}
+
+.card__img1{
+    background-image: url(../images/music-icon.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 200px;
+    flex: 1;
+
+}
+.card__img2{
+    background-image: url(../images/high-quality-icon.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 200px;
+    flex: 1;
+
+
+}
+.card__img3{
+    background-image: url(../images/devices-icon.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 200px;
+    flex: 1;
+
+}
+
+.card__title{
+    padding: 10px;
+    color: #00B172;
+    font-weight: bold;
+}
+
+/* Songs */
+
+.song {
+background-color: #00B172;
+margin: 10px;
+padding: 30px;
+color: white;
+background-image: url(../images/spotify-icon-white.png);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: 10%;
+}
+
+.song__title{
+    font-size: 1.5rem;
+}
+
+.song__subtitle{
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+.song__text{
+}
+
+.song__caratula{
+    background-image: url(../images/spotify-app.jpg);
 }
