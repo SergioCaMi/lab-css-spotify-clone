@@ -10,21 +10,26 @@ White: #FFF
 /* *{
     border: 2px solid black;
 } */
-*{
+* {
     margin: 0px;
     padding: 0px;
+
 }
 
-ul{
+body {
+    color: #1A1A1A;
+}
+
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* Header  */
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -35,7 +40,7 @@ a{
     background-color: white;
 }
 
-.navbar>ul{
+.navbar>ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,13 +48,44 @@ a{
     padding: 10px 50px;
 }
 
-.logo{
+.logo {
     background-image: url(../images/spotify-logo.png);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     flex: 0 1 20%;
 }
 
-.cover{
-    margin-top: 75px;
+
+/* Cover  */
+.cover {
+    margin-top: 58px;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    height: 800px;
+    background-position: center 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cover__title {
+    padding: 10px;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.cover__subtitle {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Whats */
+
+.whats {
+    display: flex;
+    flex-direction: column;
 }
