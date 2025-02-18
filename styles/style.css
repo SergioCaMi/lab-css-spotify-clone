@@ -5,11 +5,15 @@ Text: 1A1A1A
 Green: #00B172
 White: #FFF
 
-*/
-
-/* *{
+*{
     border: 2px solid black;
 } */
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -17,6 +21,7 @@ White: #FFF
 }
 
 body {
+    font-family: 'Poppins';
     color: #1A1A1A;
     padding-top: 58px;
 }
@@ -49,9 +54,10 @@ a {
     padding: 10px 50px;
 }
 
-.navbar a{
+.navbar a {
     color: #1A1A1A;
 }
+
 .logo {
     background-image: url(../images/spotify-logo.png);
     background-size: contain;
@@ -62,14 +68,9 @@ a {
 
 /* Cover  */
 .cover {
-    /* margin-top: 58px; */
-    background-image: url(../images/landing.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+    background: black url(../images/landing.jpg) no-repeat center bottom / cover;
     width: 100%;
-    height: 900px;
-    background-position: top 100px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,8 +78,14 @@ a {
     gap: 15px;
 }
 
+.cover__text {
+    width: 60%;
+    text-align: center;
+    color: white;
+}
+
 .cover__title {
-    padding: 10px;
+    padding: 20px;
     font-size: 3.5rem;
     color: white;
 }
@@ -90,8 +97,9 @@ a {
 
 /* Whats */
 .whats * {
-    flex: 1;
+    flex: 1 0 60px;
 }
+
 .whats {
     display: flex;
     flex-direction: column;
@@ -103,93 +111,113 @@ a {
     text-align: center;
 }
 
-.cards{
+/* Tarjetas */
+
+.cards {
     width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 15px;
     gap: 20px;
-    flex: 1 1 30%;
+    flex: 1 0 30%;
 
 }
 
-.card{
+/* Tarjeta */
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
     flex-basis: 200px;
     min-height: 200px;
     padding: 30px;
     flex: 1;
     text-align: center;
 
-
-
 }
 
-.card__img1{
-    background-image: url(../images/music-icon.png);
-    background-size:50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 200px;
-    flex: 1;
-
-}
-.card__img2{
-    background-image: url(../images/high-quality-icon.png);
-    background-size:50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 200px;
-    flex: 1;
-
-
-}
-.card__img3{
-    background-image: url(../images/devices-icon.png);
-    background-size:50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 200px;
-    flex: 1;
-
-}
-
-.card__title{
+.card__title {
     padding: 10px;
     color: #00B172;
     font-weight: bold;
 }
 
+/* Imagenes de las tarjetas */
+
+.card__img1 {
+    background-image: url(../images/music-icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 33%;
+}
+
+.card__img2 {
+    background-image: url(../images/high-quality-icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 33%;
+}
+
+.card__img3 {
+    background-image: url(../images/devices-icon.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 33%;
+}
+
+
+
 /* Songs */
 
 .song {
-background-color: #00B172;
-margin: 10px;
-padding: 30px;
-color: white;
-background-image: url(../images/spotify-icon-white.png);
-background-repeat: no-repeat;
-background-position: center center;
-background-size: 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #00B172;
+    margin: 10px;
+    padding: 30px;
+    color: white;
+    background-image: url(../images/spotify-icon-white.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10%;
 }
 
-.song__title{
+/* Contenedor del texto (40%) */
+.song__contains {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+}
+
+.song__title {
     font-size: 1.5rem;
 }
 
-.song__subtitle{
+.song__subtitle {
     font-size: 1.2rem;
     padding: 10px 0px;
 }
 
-.song__text{
+/* Zona intemedia para el logo (20%) */
+
+/* Contenedor de la imagen (40%) */
+.song__caratula {
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }
 
-.song__caratula{
-    background-image: url(../images/spotify-app.jpg);
+/* Imagen de la caratula */
+.song__caratula>img {
+    width: 50%;
+    object-fit: contain;
+    align-items: center;
+
 }
